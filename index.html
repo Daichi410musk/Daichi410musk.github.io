@@ -4,93 +4,135 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUCE Hair Salon</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Noto Serif JP', serif;
+      background-color: #fffdf9;
+    }
+    header {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #a27855;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
+    .hero {
+      background-image: url('https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 200px 20px 120px;
+    }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #d4a373;
+      color: white;
+      padding: 12px 28px;
+      margin-top: 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      margin-bottom: 40px;
+      color: #333;
+    }
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .service {
+      width: 250px;
+    }
+    .service i {
+      font-size: 40px;
+      color: #a27855;
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #f3eee8;
+      text-align: center;
+      padding: 40px 20px;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="header-left">
-        <h1 class="logo">LUCE Hair</h1>
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">メニュー</a>
-        <a href="#">スタイリスト</a>
-        <a href="#">アクセス</a>
-        <a href="#" class="login">予約する</a>
-      </div>
-    </div>
+    <div class="logo">LUCE Hair</div>
+    <nav>
+      <a href="#menu">メニュー</a>
+      <a href="#staff">スタッフ</a>
+      <a href="#contact">予約</a>
+    </nav>
   </header>
 
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>あなたの「キレイ」を引き出す<br>プライベートサロン</h1>
-      <p>LUCEは、落ち着いた空間で丁寧なカウンセリングと<br>高い技術を提供する完全予約制の美容室です。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">WEB予約はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-line"></span>LINE予約</a>
-        <a href="#" class="btn twitter"><span class="fa fa-instagram"></span>Instagramを見る</a>
-      </div>
-    </div>
-  </div>
+  <section class="hero">
+    <h1>あなたの"キレイ"を引き出す美容室</h1>
+    <p>LUCEは落ち着いた空間であなたらしいスタイルを提案します</p>
+    <a href="#contact" class="btn">ご予約はこちら</a>
+  </section>
 
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Menu - 施術メニュー</h2>
+  <section class="section" id="menu">
+    <h2>メニュー</h2>
+    <div class="services">
+      <div class="service">
+        <i class="fa-solid fa-scissors"></i>
+        <h3>カット</h3>
+        <p>骨格に合わせたデザインで美しさを引き出します。</p>
       </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" width="80">
-            <p>カット</p>
-          </div>
-          <p class="text-contents">髪質や骨格に合わせたデザインカットで、毎日が扱いやすいスタイルへ。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/2356/2356853.png" width="80">
-            <p>カラー</p>
-          </div>
-          <p class="text-contents">透明感・ツヤ感のあるカラーをご提案。オーガニック系も対応可能。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/2891/2891228.png" width="80">
-            <p>パーマ</p>
-          </div>
-          <p class="text-contents">柔らかく動く質感で、ナチュラルな印象に仕上げます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/984/984199.png" width="80">
-            <p>ヘッドスパ</p>
-          </div>
-          <p class="text-contents">日々の疲れを癒す極上ヘッドスパで、髪と頭皮の健康をサポート。</p>
-        </div>
+      <div class="service">
+        <i class="fa-solid fa-brush"></i>
+        <h3>カラー</h3>
+        <p>肌色や季節に合わせた自然なカラー提案。</p>
       </div>
-      <div class="clear"></div>
+      <div class="service">
+        <i class="fa-solid fa-water"></i>
+        <h3>トリートメント</h3>
+        <p>髪の内部から補修し、ツヤと潤いを与えます。</p>
+      </div>
     </div>
-  </div>
-
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>お気軽にご予約・ご相談ください</h2>
-        <h3>LINEまたはWEB予約から受付中です</h3>
-      </div>
-      <span class="btn message">予約する</span>
-    </div>
-  </div>
+  </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 LUCE Hair Salon - Toyama</p>
-      <p>富山市○○区○丁目12-34　TEL: 0123-45-6789</p>
-    </div>
+    <p>&copy; 2025 LUCE Hair Salon. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
-
